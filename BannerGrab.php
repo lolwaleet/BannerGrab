@@ -12,12 +12,12 @@ echo "\033[33m ____                               _____           _
 |  _ < / _` | '_ \\| '_ \\ / _ \\ '__| | |_ | '__/ _` | '_ \\
 | |_) | (_| | | | | | | |  __/ |  | |__| | | | (_| | |_) |
 |____/ \\__,_|_| |_|_| |_|\\___|_|   \\_____|_|  \\__,_|_.__/ ~ by \033[31mAnonGuy
-\033[32mGreets to ~ \033[36mT3N38R1S \033[31m<3 <3\033[0m -- \033[36mMakMan\033[0m -- \33[36mMawnsta Maini\033[0m -- \33[36mKira\033[0m  -- \33[36m".get_current_user()."\033[0m\n";
+\033[32mGreets to ~ \033[36mT3N38R1S \033[31m<3 <3\033[0m -- \033[36mMakMan\033[0m -- \33[36mMawnsta Maini\033[0m -- \33[36mKira\033[0m  -- \33[36mASDA\033[0m\n";
 $sep = "\033[36m-----------------------------------------------------------------------";
 $array = ['Server' => "\033[31m[!]\033[0m Server header found!", 'X-Generator' => "\033[31m[!]\033[0m X-Generator header found!", 'X-Powered-By' => "\033[31m[!]\033[0m X-Powered-By header found!", 'zope3' => "\033[31m[!]\033[0m Zope framework in use!", 'CAKEPHP' => "\033[31m[!]\033[0m CakePHP framework in use!", 'kohanasession' => "\033[31m[!]\033[0m Kohana framework in use!", 'X-AspNet-Version' => "\033[31m[!]\033[0m ASP.NET framework in use!", 'laravel_session' => "\033[31m[!]\033[0m Laravel framework in use!", '__cfduid' => "\033[31m[!]\033[0m Site is behind CloudFlare!", 'ns_af' => "\033[31m[!]\033[0m Site is behind Citrix Netscaler WAF!", 'Joomla' => "\033[31m[!]\033[0m Site is using Joomla!", 'Drupal' => "\033[31m[!]\033[0m Site is using Drupal!", 'X-Pingback' => "\033[31m[!]\033[0m Site is running Wordpress!", 'Link' => "\033[31m[!]\033[0m Site is running Wordpress!"];
 
 echo "$sep\n\033[31mURL ->\033[0m ";
-$handle = fopen("php://stdin", 'r');
+$handle = fopen('php://stdin', 'r');
 $url = trim(fgets($handle));
 fclose($handle);
 echo "$sep\n";
@@ -45,9 +45,11 @@ echo "$sep\n\033[31mSubdomains -> $subs$sep\n";
 unlink($tmp);
 
 if (getWordpressInformation($url)['iswordpress']) {	
-	$plugins = getWordpressInformation($url)['plugins'];
-	$themes  = getWordpressInformation($url)['themes'];
-	$version = getWordpressInformation($url)['version'];
+
+	$info    = getWordpressInformation($url); // Thanks, ASDA! :D
+	$plugins = $info['plugins'];
+	$themes  = $info['themes'];
+	$version = $info['version'];
 
 	echo "\033[31m[!]\033[0m Scanning Themes and Plugins [ Site is running WP $version ] . . .\n\n";
 
