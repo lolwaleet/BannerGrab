@@ -5,9 +5,9 @@ BannerGrab is a php-based tool, which helps you find juicy headers, subdomains, 
 ### Screenshots
 
 #### Wordpress
-![Wordpress](https://s9.postimg.org/7y9zd0s4f/BG_Wordpress.png)
+![Wordpress](http://i.imgur.com/MHpxIME.png)
 #### Joomla
-![Joomla](https://s9.postimg.org/btlkbr0y7/BG_Joomla.png)
+![Joomla](http://i.imgur.com/qYpQ6DC.png)
 
 ### Prerequisities
 
